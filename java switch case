@@ -1,0 +1,26 @@
+
+class Solution {
+    static double switchCase(int choice, List<Double> arr) {
+      
+      double R,L,B;
+        switch(choice){
+        case 1:{
+            R=arr.get(0);
+            return Math.PI*R*R;
+        }
+        case 2:{
+            L=arr.get(0);
+            B=arr.get(1);
+            return L*B;
+        }
+        default :{
+            return -1;
+        }
+            
+            
+            
+            
+            
+        }
+    }
+}
