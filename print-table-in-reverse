@@ -1,0 +1,10 @@
+
+class Solution {
+    public void calculateMultiples(int n) {
+        
+        for(int i=n*10;i>=n;i-=n){
+            System.out.print(i+" ");
+            
+        }
+    }
+}
