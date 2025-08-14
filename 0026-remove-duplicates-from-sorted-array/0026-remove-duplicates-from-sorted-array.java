@@ -12,10 +12,11 @@ class Solution { //here we have to return only k ,judge can auto read values of 
             if (nums[l] != nums[r]) {
                 l++;
                 if (l != r) {
-                    int temp = nums[r];
-                    nums[r] = nums[l];
-                    nums[l] = temp;
-                }
+                //     int temp = nums[r];
+                //     nums[r] = nums[l];
+                //     nums[l] = temp;      //no need as we dont have care about rest element ,with value of k the judge automatucally found that how much elemnt i have to focus
+                // }
+                nums[l]=nums[r];
 
             }
 
@@ -23,3 +24,4 @@ class Solution { //here we have to return only k ,judge can auto read values of 
         return l + 1;
     }
 }
+  
