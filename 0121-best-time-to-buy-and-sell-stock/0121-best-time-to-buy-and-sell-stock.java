@@ -1,9 +1,9 @@
 class Solution {
     public int maxProfit(int[] prices) {
         int n=prices.length;
-         int buyPrice = Integer.MAX_VALUE;
+         int buyPrice = prices[0];
         int maximumProfit = 0;
-        for (int i = 0; i <n; i++) {
+        for (int i = 1; i <n; i++) {
             if (buyPrice < prices[i]) {
                 int profit = prices[i] - buyPrice;
                 maximumProfit = Math.max(profit, maximumProfit);
