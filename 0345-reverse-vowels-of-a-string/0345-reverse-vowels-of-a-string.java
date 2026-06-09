@@ -27,10 +27,13 @@ else if (vowels.contains(sb.charAt(lp)))
 {
     rp--;
 }
-         else{
+         else if(vowels.contains(sb.charAt(rp))){
             lp++;
          }
-
+else{
+    lp++;
+    rp--;
+}
         
     }
 
