@@ -4,8 +4,8 @@ class Solution {
 if(nums.length==1){
     return 0;
 }
-int fbk=0;
-int lbk=0;
+int fbk=-1;
+int lbk=-1;
 int min=Integer.MAX_VALUE;
 int max=Integer.MIN_VALUE;
 //first break point
@@ -14,6 +14,9 @@ if(nums[i]>nums[i+1]){
    fbk=i;
    break;
 }
+ }
+ if(fbk==-1){
+    return 0;
  }
 
 
@@ -41,9 +44,6 @@ if(nums[i]<nums[i-1] ){
     lbk++;
  }
 
- if(fbk==0 && lbk==0){
-    return 0;
- }
   return (lbk-fbk)+1;
 
     }
