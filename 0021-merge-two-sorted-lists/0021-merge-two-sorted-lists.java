@@ -40,11 +40,14 @@ class Solution {
         }
 
         //if L1 ends first
-if(L1==null &&  L2!=null){
+// if(L1==null &&  L2!=null){
+//     temp.next=L2;
+// }
+if(L1==null){
     temp.next=L2;
 }
 //if L2 ends first
-if(L1!=null && L2==null){
+else{
     temp.next=L1;
 }
 
