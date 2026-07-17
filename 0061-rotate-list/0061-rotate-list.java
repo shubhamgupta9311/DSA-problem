@@ -10,6 +10,9 @@
  */
 class Solution {
     public ListNode rotateRight(ListNode head, int k) {
+        if(head==null){
+            return null;
+        }
          //finding size
 ListNode temp=head;
 int size=0;
@@ -20,9 +23,7 @@ last=temp;
 temp=temp.next;
 }
 //edge case
-if(size==0){
-return null;
-}
+
 
 
 k=k%size;
