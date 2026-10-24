@@ -1,36 +1,24 @@
-class Solution {     //not may be optimized
+class Solution {
     public int fib(int n) {
-        // int firstTerm=0;
-        // int secondTerm=1;
-        // if(n==0){
-        //     return 0;
-        // }
-        // else if(n==1){
-        //     return 1;
-        // }
-        // else{
-        //       for(int i=1;i<=n;i++){
-            
-        //         int thirdTerm=firstTerm+secondTerm;
-        //         firstTerm=secondTerm;
-        //         secondTerm=thirdTerm;
-        //       }
-        //       return firstTerm;
-        // }
+//iteration method 
+        if (n < 2) {
+            return n;
+        }
 
+        else {
+            int ft = 0;
+            int st = 1;
+            int th = 0;
+            for (int i = 1; i < n; i++) {
+                th = ft + st;
+                ft = st;
+                st = th;
+            }
 
+            return th;
 
+        }
 
-
-//doing using recursion
-
-
-
-//base case
-if(n==0 ||n==1){
-    return n;
-}
-
-return (fib(n-1)+fib(n-2));
     }
+
 }
