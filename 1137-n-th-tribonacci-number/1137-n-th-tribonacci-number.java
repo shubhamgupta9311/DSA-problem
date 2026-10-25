@@ -1,24 +1,31 @@
 class Solution {
+public int helper(int n,int dp[]){
+if(n==0 || n==1){
+    return n;
+}
+
+if(n==2){
+    return 1;
+}
+
+
+if(dp[n]!=0){
+    return dp[n];
+}
+
+dp[n]=helper(n-1,dp)+helper(n-2,dp)+helper(n-3,dp);
+
+return dp[n];
+
+
+}
+
     public int tribonacci(int n) {
-        int firstTerm=0;
-        int secondTerm=1;
-        int thirdTerm=1;
-        if(n==0){
-            return 0;
-        }
-        else if(n==1 || n==2){
-            return 1;
-        }
-        else{
-         for(int i=1;i<=n;i++){
-            int fourthTerm=firstTerm+secondTerm+thirdTerm;
-            firstTerm=secondTerm;
-            secondTerm=thirdTerm;
-            thirdTerm=fourthTerm;}
+        //simple if else and loop easy no need to write btes that better here
 
-            return firstTerm;
-        }
-
+        //recursion+memoziation
+        int dp[] = new int[n + 1];
+        return helper(n, dp);
 
     }
 }
